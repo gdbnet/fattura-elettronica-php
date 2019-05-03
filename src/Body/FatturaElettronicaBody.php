@@ -225,7 +225,7 @@ class FatturaElettronicaBody extends AbstractModel implements FatturaElettronica
         }
 
         if (isset($array['DatiPagamento'])) {
-            if (is_array(array_values($array['DatiPagamento'])[0])) {
+            if (isset($array['DatiPagamento'][0])) {
                 foreach ($array['DatiPagamento'] as $datiPagamento) {
                     $fatturaElettronicaBody->addDatiPagamento(DatiPagamento::fromArray($datiPagamento));
                 }
@@ -235,7 +235,7 @@ class FatturaElettronicaBody extends AbstractModel implements FatturaElettronica
         }
 
         if (isset($array['Allegati'])) {
-            if (is_array(array_values($array['Allegati'])[0])) {
+            if (isset($array['Allegati'][0])) {
                 foreach ($array['Allegati'] as $allegato) {
                     $fatturaElettronicaBody->addAllegati(Allegati::fromArray($allegato));
                 }

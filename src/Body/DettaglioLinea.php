@@ -535,9 +535,9 @@ class DettaglioLinea implements FatturaElettronicaInterface
         }
 
         if (isset($array['CodiceArticolo'])) {
-            if (is_array(array_values($array['CodiceArticolo'])[0])) {
-                foreach ($array['CodiceArticolo'] as $scontoMaggiorazione) {
-                    $dettaglioLinea->addCodiceArticolo(CodiceArticolo::fromArray($scontoMaggiorazione));
+            if (isset($array['CodiceArticolo'][0])) {
+                foreach ($array['CodiceArticolo'] as $codiceArticolo) {
+                    $dettaglioLinea->addCodiceArticolo(CodiceArticolo::fromArray($codiceArticolo));
                 }
             } else {
                 $dettaglioLinea->addCodiceArticolo(CodiceArticolo::fromArray($array['CodiceArticolo']));
@@ -545,7 +545,7 @@ class DettaglioLinea implements FatturaElettronicaInterface
         }
 
         if (isset($array['ScontoMaggiorazione'])) {
-            if (is_array(array_values($array['ScontoMaggiorazione'])[0])) {
+            if (isset($array['ScontoMaggiorazione'][0])) {
                 foreach ($array['ScontoMaggiorazione'] as $scontoMaggiorazione) {
                     $dettaglioLinea->addScontoMaggiorazione(ScontoMaggiorazione::fromArray($scontoMaggiorazione));
                 }
@@ -555,7 +555,7 @@ class DettaglioLinea implements FatturaElettronicaInterface
         }
 
         if (isset($array['AltriDatiGestionali'])) {
-            if (is_array(array_values($array['AltriDatiGestionali'])[0])) {
+            if (isset($array['AltriDatiGestionali'][0])) {
                 foreach ($array['AltriDatiGestionali'] as $datiGestionali) {
                     $dettaglioLinea->addAltriDatiGestionali(AltriDatiGestionali::fromArray($datiGestionali));
                 }

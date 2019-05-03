@@ -578,7 +578,7 @@ class DatiGeneraliDocumento implements FatturaElettronicaInterface
         }
 
         if (isset($array['DatiCassaPrevidenziale'])) {
-            if (is_array(array_values($array['DatiCassaPrevidenziale'])[0])) {
+            if (isset($array['DatiCassaPrevidenziale'][0])) {
                 foreach ($array['DatiCassaPrevidenziale'] as $datiCassaPrevidenziale) {
                     $datiGeneraliDocumento->addDatiCassaPrevidenziale(DatiCassaPrevidenziale::fromArray($datiCassaPrevidenziale));
                 }
@@ -588,7 +588,7 @@ class DatiGeneraliDocumento implements FatturaElettronicaInterface
         }
 
         if (isset($array['ScontoMaggiorazione'])) {
-            if (is_array(array_values($array['ScontoMaggiorazione'])[0])) {
+            if (isset($array['ScontoMaggiorazione'][0])) {
                 foreach ($array['ScontoMaggiorazione'] as $scontoMaggiorazione) {
                     $datiGeneraliDocumento->addScontoMaggiorazione(ScontoMaggiorazione::fromArray($scontoMaggiorazione));
                 }

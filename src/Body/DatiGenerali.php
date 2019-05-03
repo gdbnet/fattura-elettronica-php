@@ -461,7 +461,7 @@ class DatiGenerali implements FatturaElettronicaInterface
         $datiGenerali = new self($DatiGeneraliDocumento);
 
         if (isset($array['DatiOrdineAcquisto'])) {
-            if (is_array(array_values($array['DatiOrdineAcquisto'])[0])) {
+            if (isset($array['DatiOrdineAcquisto'][0])) {
                 foreach ($array['DatiOrdineAcquisto'] as $datiOrdineAcquisto) {
                     $datiGenerali->addDatiOrdineAcquisto(DatiRiferimento::fromArray($datiOrdineAcquisto));
                 }
@@ -471,7 +471,7 @@ class DatiGenerali implements FatturaElettronicaInterface
         }
 
         if (isset($array['DatiContratto'])) {
-            if (is_array(array_values($array['DatiContratto'])[0])) {
+            if (isset($array['DatiContratto'][0])) {
                 foreach ($array['DatiContratto'] as $datiContratto) {
                     $datiGenerali->addDatiContratto(DatiRiferimento::fromArray($datiContratto));
                 }
@@ -481,7 +481,7 @@ class DatiGenerali implements FatturaElettronicaInterface
         }
 
         if (isset($array['DatiConvenzione'])) {
-            if (is_array(array_values($array['DatiConvenzione'])[0])) {
+            if (isset($array['DatiConvenzione'][0])) {
                 foreach ($array['DatiConvenzione'] as $datiConvenzione) {
                     $datiGenerali->addDatiConvenzione(DatiRiferimento::fromArray($datiConvenzione));
                 }
@@ -491,7 +491,7 @@ class DatiGenerali implements FatturaElettronicaInterface
         }
 
         if (isset($array['DatiRicezione'])) {
-            if (is_array(array_values($array['DatiRicezione'])[0])) {
+            if (isset($array['DatiRicezione'][0])) {
                 foreach ($array['DatiRicezione'] as $datiRicezione) {
                     $datiGenerali->addDatiRicezione(DatiRiferimento::fromArray($datiRicezione));
                 }
@@ -501,7 +501,7 @@ class DatiGenerali implements FatturaElettronicaInterface
         }
 
         if (isset($array['DatiFattureCollegate'])) {
-            if (is_array(array_values($array['DatiFattureCollegate'])[0])) {
+            if (isset($array['DatiFattureCollegate'][0])) {
                 foreach ($array['DatiFattureCollegate'] as $datiFatttureCollegate) {
                     $datiGenerali->addDatiFattureCollegate(DatiRiferimento::fromArray($datiFatttureCollegate));
                 }
