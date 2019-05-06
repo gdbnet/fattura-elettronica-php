@@ -2,6 +2,8 @@
 
 A PHP package to read and write the xml of italian electronic invoice.
 
+    composer require manrix/fattura-elettronica-php
+
 ## Usage
 
 Write the xml:
