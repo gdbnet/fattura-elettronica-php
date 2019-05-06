@@ -115,7 +115,8 @@ class RappresentanteFiscale implements FatturaElettronicaInterface
         $Anagrafica = Anagrafica::fromArray($array['DatiAnagrafici']['Anagrafica']);
         $rappresentanteFiscale = new RappresentanteFiscale($IdFiscaleIVA, $Anagrafica);
 
-        if (isset($array['DatiAnagrafici']['CodiceFiscale'])) {
+        if (isset($array['DatiAnagrafici']['CodiceFiscale']) &&
+            !empty(trim($array['DatiAnagrafici']['CodiceFiscale']))) {
             $rappresentanteFiscale->setCodiceFiscale($array['DatiAnagrafici']['CodiceFiscale']);
         }
 

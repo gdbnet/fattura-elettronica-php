@@ -201,7 +201,7 @@ class FatturaElettronicaHeader extends AbstractModel implements FatturaElettroni
             $array['TerzoIntermediarioOSoggettoEmittente'] = $this->getTerzoIntermediarioOSoggettoEmittente()->toArray();
         }
 
-        return $this->clean_array($array);
+        return $this->cleanArray($array);
     }
 
     /**
@@ -222,7 +222,7 @@ class FatturaElettronicaHeader extends AbstractModel implements FatturaElettroni
         if (isset($array['TerzoIntermediarioOSoggettoEmittente'])) {
             $fatturaElettronicaHeader->setTerzoIntermediarioOSoggettoEmittente(TerzoIntermediarioOSoggettoEmittente::fromArray($array['TerzoIntermediarioOSoggettoEmittente']));
         }
-        if (isset($array['SoggettoEmittente'])) {
+        if (isset($array['SoggettoEmittente']) && !empty(trim($array['SoggettoEmittente']))) {
             $fatturaElettronicaHeader->setSoggettoEmittente($array['SoggettoEmittente']);
         }
 

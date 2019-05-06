@@ -476,52 +476,54 @@ class DatiTrasporto implements FatturaElettronicaInterface
     {
         $datiTrasporto = new self();
 
-        if (isset($array['DatiAnagraficiVettore']['IdFiscaleIVA'])) {
+        if (isset($array['DatiAnagraficiVettore']['IdFiscaleIVA']) && is_array($array['DatiAnagraficiVettore']['IdFiscaleIVA'])) {
             $datiTrasporto->setIdFiscaleIVA(Fiscale::fromArray($array['DatiAnagraficiVettore']['IdFiscaleIVA']));
         }
-        if (isset($array['DatiAnagraficiVettore']['CodiceFiscale'])) {
+        if (isset($array['DatiAnagraficiVettore']['CodiceFiscale']) &&
+            !empty(trim($array['DatiAnagraficiVettore']['CodiceFiscale']))) {
             $datiTrasporto->setCodiceFiscale($array['DatiAnagraficiVettore']['CodiceFiscale']);
         }
-        if (isset($array['DatiAnagraficiVettore']['Anagrafica'])) {
+        if (isset($array['DatiAnagraficiVettore']['Anagrafica']) && is_array($array['DatiAnagraficiVettore']['Anagrafica'])) {
             $datiTrasporto->setAnagrafica(Anagrafica::fromArray($array['DatiAnagraficiVettore']['Anagrafica']));
         }
-        if (isset($array['DatiAnagraficiVettore']['NumeroLicenzaGuida'])) {
+        if (isset($array['DatiAnagraficiVettore']['NumeroLicenzaGuida']) &&
+            !empty(trim($array['DatiAnagraficiVettore']['NumeroLicenzaGuida']))) {
             $datiTrasporto->setNumeroLicenzaGuida($array['DatiAnagraficiVettore']['NumeroLicenzaGuida']);
         }
-        if (isset($array['MezzoTrasporto'])) {
+        if (isset($array['MezzoTrasporto']) && !empty(trim($array['MezzoTrasporto']))) {
             $datiTrasporto->setMezzoTrasporto($array['MezzoTrasporto']);
         }
-        if (isset($array['CausaleTrasporto'])) {
+        if (isset($array['CausaleTrasporto']) && !empty(trim($array['CausaleTrasporto']))) {
             $datiTrasporto->setCausaleTrasporto($array['CausaleTrasporto']);
         }
-        if (isset($array['NumeroColli'])) {
+        if (isset($array['NumeroColli']) && !empty(trim($array['NumeroColli']))) {
             $datiTrasporto->setNumeroColli($array['NumeroColli']);
         }
-        if (isset($array['Descrizione'])) {
+        if (isset($array['Descrizione']) && !empty(trim($array['Descrizione']))) {
             $datiTrasporto->setDescrizione($array['Descrizione']);
         }
-        if (isset($array['UnitaMisuraPeso'])) {
+        if (isset($array['UnitaMisuraPeso']) && !empty(trim($array['UnitaMisuraPeso']))) {
             $datiTrasporto->setUnitaMisuraPeso($array['UnitaMisuraPeso']);
         }
-        if (isset($array['PesoLordo'])) {
+        if (isset($array['PesoLordo']) && !empty(trim($array['PesoLordo']))) {
             $datiTrasporto->setPesoLordo($array['PesoLordo']);
         }
-        if (isset($array['PesoNetto'])) {
+        if (isset($array['PesoNetto']) && !empty(trim($array['PesoNetto']))) {
             $datiTrasporto->setPesoNetto($array['PesoNetto']);
         }
-        if (isset($array['DataOraRitiro'])) {
+        if (isset($array['DataOraRitiro']) && !empty(trim($array['DataOraRitiro']))) {
             $datiTrasporto->setDataOraRitiro($array['DataOraRitiro']);
         }
-        if (isset($array['DataInizioTrasporto'])) {
+        if (isset($array['DataInizioTrasporto']) && !empty(trim($array['DataInizioTrasporto']))) {
             $datiTrasporto->setDataInizioTrasporto($array['DataInizioTrasporto']);
         }
-        if (isset($array['TipoResa'])) {
+        if (isset($array['TipoResa']) && !empty(trim($array['TipoResa']))) {
             $datiTrasporto->setTipoResa($array['TipoResa']);
         }
-        if (isset($array['IndirizzoResa'])) {
+        if (isset($array['IndirizzoResa']) && is_array($array['IndirizzoResa'])) {
             $datiTrasporto->setIndirizzoResa(Indirizzo::fromArray($array['IndirizzoResa']));
         }
-        if (isset($array['DataOraConsegna'])) {
+        if (isset($array['DataOraConsegna']) && !empty(trim($array['DataOraConsegna']))) {
             $datiTrasporto->setDataOraConsegna($array['DataOraConsegna']);
         }
 

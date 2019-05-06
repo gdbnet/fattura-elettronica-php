@@ -206,7 +206,7 @@ class FatturaElettronicaBody extends AbstractModel implements FatturaElettronica
             }
         }
 
-        return $this->clean_array($array);
+        return $this->cleanArray($array);
     }
 
     /**
@@ -220,7 +220,7 @@ class FatturaElettronicaBody extends AbstractModel implements FatturaElettronica
         $DatiBeniServizi = DatiBeniServizi::fromArray($array['DatiBeniServizi']);
         $fatturaElettronicaBody = new self($DatiGenerali, $DatiBeniServizi);
 
-        if (isset($array['DatiVeicoli'])) {
+        if (isset($array['DatiVeicoli']) && is_array($array['DatiVeicoli'])) {
             $fatturaElettronicaBody->setDatiVeicoli(DatiVeicoli::fromArray($array['DatiVeicoli']));
         }
 

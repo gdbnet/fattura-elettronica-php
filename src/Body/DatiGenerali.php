@@ -530,14 +530,16 @@ class DatiGenerali implements FatturaElettronicaInterface
             }
         }
 
-        if (isset($array['DatiTrasporto'])) {
+        if (isset($array['DatiTrasporto']) && is_array($array['DatiTrasporto'])) {
             $datiGenerali->setDatiTrasporto(DatiTrasporto::fromArray($array['DatiTrasporto']));
         }
 
-        if (isset($array['FatturaPrincipale']['NumeroFatturaPrincipale'])) {
+        if (isset($array['FatturaPrincipale']['NumeroFatturaPrincipale']) &&
+            !empty(trim($array['FatturaPrincipale']['NumeroFatturaPrincipale']))) {
             $datiGenerali->setNumeroFatturaPrincipale($array['FatturaPrincipale']['NumeroFatturaPrincipale']);
         }
-        if (isset($array['FatturaPrincipale']['DataFatturaPrincipale'])) {
+        if (isset($array['FatturaPrincipale']['DataFatturaPrincipale']) &&
+            !empty(trim($array['FatturaPrincipale']['DataFatturaPrincipale']))) {
             $datiGenerali->setDataFatturaPrincipale($array['FatturaPrincipale']['DataFatturaPrincipale']);
         }
 

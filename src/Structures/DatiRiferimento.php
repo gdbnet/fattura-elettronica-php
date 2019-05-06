@@ -225,19 +225,19 @@ class DatiRiferimento implements FatturaElettronicaInterface
                 $datiRiferimento->addRiferimentoNumeroLinea($array['RiferimentoNumeroLinea']);
             }
         }
-        if (isset($array['Data'])) {
+        if (isset($array['Data']) && !empty(trim($array['Data']))) {
             $datiRiferimento->setData($array['Data']);
         }
-        if (isset($array['NumItem'])) {
+        if (isset($array['NumItem']) && !empty(trim($array['NumItem']))) {
             $datiRiferimento->setNumItem($array['NumItem']);
         }
-        if (isset($array['CodiceCommessaConvenzione'])) {
+        if (isset($array['CodiceCommessaConvenzione']) && !empty(trim($array['CodiceCommessaConvenzione']))) {
             $datiRiferimento->setCodiceCommessaConvenzione($array['CodiceCommessaConvenzione']);
         }
-        if (isset($array['CodiceCUP'])) {
+        if (isset($array['CodiceCUP']) && !empty(trim($array['CodiceCUP']))) {
             $datiRiferimento->setCodiceCUP($array['CodiceCUP']);
         }
-        if (isset($array['CodiceCIG'])) {
+        if (isset($array['CodiceCIG']) && !empty(trim($array['CodiceCIG']))) {
             $datiRiferimento->setCodiceCIG($array['CodiceCIG']);
         }
 

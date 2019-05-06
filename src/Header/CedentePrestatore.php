@@ -580,53 +580,63 @@ class CedentePrestatore implements FatturaElettronicaInterface
         $RegimeFiscale = $array['DatiAnagrafici']['RegimeFiscale'];
         $cedentePrestatore = new self($IdFiscaleIVA, $Anagrafica, $Sede, $RegimeFiscale);
 
-        if (isset($array['DatiAnagrafici']['CodiceFiscale'])) {
+        if (isset($array['DatiAnagrafici']['CodiceFiscale']) &&
+            !empty(trim($array['DatiAnagrafici']['CodiceFiscale']))) {
             $cedentePrestatore->setCodiceFiscale($array['DatiAnagrafici']['CodiceFiscale']);
         }
-        if (isset($array['DatiAnagrafici']['AlboProfessionale'])) {
+        if (isset($array['DatiAnagrafici']['AlboProfessionale']) &&
+            !empty(trim($array['DatiAnagrafici']['AlboProfessionale']))) {
             $cedentePrestatore->setAlboProfessionale($array['DatiAnagrafici']['AlboProfessionale']);
         }
-        if (isset($array['DatiAnagrafici']['ProvinciaAlbo'])) {
+        if (isset($array['DatiAnagrafici']['ProvinciaAlbo']) &&
+            !empty(trim($array['DatiAnagrafici']['ProvinciaAlbo']))) {
             $cedentePrestatore->setProvinciaAlbo($array['DatiAnagrafici']['ProvinciaAlbo']);
         }
-        if (isset($array['DatiAnagrafici']['NumeroIscrizioneAlbo'])) {
+        if (isset($array['DatiAnagrafici']['NumeroIscrizioneAlbo']) &&
+            !empty(trim($array['DatiAnagrafici']['NumeroIscrizioneAlbo']))) {
             $cedentePrestatore->setNumeroIscrizioneAlbo($array['DatiAnagrafici']['NumeroIscrizioneAlbo']);
         }
-        if (isset($array['DatiAnagrafici']['DataIscrizioneAlbo'])) {
+        if (isset($array['DatiAnagrafici']['DataIscrizioneAlbo']) &&
+            !empty(trim($array['DatiAnagrafici']['DataIscrizioneAlbo']))) {
             $cedentePrestatore->setDataIscrizioneAlbo($array['DatiAnagrafici']['DataIscrizioneAlbo']);
         }
 
-        if (isset($array['StabileOrganizzazione'])) {
+        if (isset($array['StabileOrganizzazione']) && is_array($array['StabileOrganizzazione'])) {
             $cedentePrestatore->setStabileOrganizzazione(Indirizzo::fromArray($array['StabileOrganizzazione']));
         }
 
-        if (isset($array['IscrizioneREA']['Ufficio'])) {
+        if (isset($array['IscrizioneREA']['Ufficio']) &&
+            !empty(trim($array['IscrizioneREA']['Ufficio']))) {
             $cedentePrestatore->setUfficio($array['IscrizioneREA']['Ufficio']);
         }
-        if (isset($array['IscrizioneREA']['NumeroREA'])) {
+        if (isset($array['IscrizioneREA']['NumeroREA']) &&
+            !empty(trim($array['IscrizioneREA']['NumeroREA']))) {
             $cedentePrestatore->setNumeroREA($array['IscrizioneREA']['NumeroREA']);
         }
-        if (isset($array['IscrizioneREA']['CapitaleSociale'])) {
+        if (isset($array['IscrizioneREA']['CapitaleSociale']) &&
+            !empty(trim($array['IscrizioneREA']['CapitaleSociale']))) {
             $cedentePrestatore->setCapitaleSociale($array['IscrizioneREA']['CapitaleSociale']);
         }
-        if (isset($array['IscrizioneREA']['SocioUnico'])) {
+        if (isset($array['IscrizioneREA']['SocioUnico']) &&
+            !empty(trim($array['IscrizioneREA']['SocioUnico']))) {
             $cedentePrestatore->setSocioUnico($array['IscrizioneREA']['SocioUnico']);
         }
-        if (isset($array['IscrizioneREA']['StatoLiquidazione'])) {
+        if (isset($array['IscrizioneREA']['StatoLiquidazione']) &&
+            !empty(trim($array['IscrizioneREA']['StatoLiquidazione']))) {
             $cedentePrestatore->setStatoLiquidazione($array['IscrizioneREA']['StatoLiquidazione']);
         }
 
-        if (isset($array['Contatti']['Telefono'])) {
+        if (isset($array['Contatti']['Telefono']) && !empty(trim($array['Contatti']['Telefono']))) {
             $cedentePrestatore->setTelefono($array['Contatti']['Telefono']);
         }
-        if (isset($array['Contatti']['Fax'])) {
+        if (isset($array['Contatti']['Fax']) && !empty(trim($array['Contatti']['Fax']))) {
             $cedentePrestatore->setFax($array['Contatti']['Fax']);
         }
-        if (isset($array['Contatti']['Email'])) {
+        if (isset($array['Contatti']['Email']) && !empty(trim($array['Contatti']['Email']))) {
             $cedentePrestatore->setEmail($array['Contatti']['Email']);
         }
 
-        if (isset($array['RiferimentoAmministrazione'])) {
+        if (isset($array['RiferimentoAmministrazione']) && !empty(trim($array['RiferimentoAmministrazione']))) {
             $cedentePrestatore->setRiferimentoAmministrazione($array['RiferimentoAmministrazione']);
         }
 

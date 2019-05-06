@@ -559,61 +559,61 @@ class DettaglioPagamento implements FatturaElettronicaInterface
     {
         $dettaglioPagamento = new self($array['ModalitaPagamento'], $array['ImportoPagamento']);
 
-        if (isset($array['Beneficiario'])) {
+        if (isset($array['Beneficiario']) && !empty(trim($array['Beneficiario']))) {
             $dettaglioPagamento->setBeneficiario($array['Beneficiario']);
         }
-        if (isset($array['DataRiferimentoTerminiPagamento'])) {
+        if (isset($array['DataRiferimentoTerminiPagamento']) && !empty(trim($array['DataRiferimentoTerminiPagamento']))) {
             $dettaglioPagamento->setDataRiferimentoTerminiPagamento($array['DataRiferimentoTerminiPagamento']);
         }
-        if (isset($array['GiorniTerminiPagamento'])) {
+        if (isset($array['GiorniTerminiPagamento']) && !empty(trim($array['GiorniTerminiPagamento']))) {
             $dettaglioPagamento->setGiorniTerminiPagamento($array['GiorniTerminiPagamento']);
         }
-        if (isset($array['DataScadenzaPagamento'])) {
+        if (isset($array['DataScadenzaPagamento']) && !empty(trim($array['DataScadenzaPagamento']))) {
             $dettaglioPagamento->setDataScadenzaPagamento($array['DataScadenzaPagamento']);
         }
-        if (isset($array['CodUfficioPostale'])) {
+        if (isset($array['CodUfficioPostale']) && !empty(trim($array['CodUfficioPostale']))) {
             $dettaglioPagamento->setCodUfficioPostale($array['CodUfficioPostale']);
         }
-        if (isset($array['CognomeQuietanzante'])) {
+        if (isset($array['CognomeQuietanzante']) && !empty(trim($array['CognomeQuietanzante']))) {
             $dettaglioPagamento->setCognomeQuietanzante($array['CognomeQuietanzante']);
         }
-        if (isset($array['NomeQuietanzante'])) {
+        if (isset($array['NomeQuietanzante']) && !empty(trim($array['NomeQuietanzante']))) {
             $dettaglioPagamento->setNomeQuietanzante($array['NomeQuietanzante']);
         }
-        if (isset($array['CFQuietanzante'])) {
+        if (isset($array['CFQuietanzante']) && !empty(trim($array['CFQuietanzante']))) {
             $dettaglioPagamento->setCFQuietanzante($array['CFQuietanzante']);
         }
-        if (isset($array['TitoloQuietanzante'])) {
+        if (isset($array['TitoloQuietanzante']) && !empty(trim($array['TitoloQuietanzante']))) {
             $dettaglioPagamento->setTitoloQuietanzante($array['TitoloQuietanzante']);
         }
-        if (isset($array['IstitutoFinanziario'])) {
+        if (isset($array['IstitutoFinanziario']) && !empty(trim($array['IstitutoFinanziario']))) {
             $dettaglioPagamento->setIstitutoFinanziario($array['IstitutoFinanziario']);
         }
-        if (isset($array['IBAN'])) {
+        if (isset($array['IBAN']) && !empty(trim($array['IBAN']))) {
             $dettaglioPagamento->setIBAN($array['IBAN']);
         }
-        if (isset($array['ABI'])) {
+        if (isset($array['ABI']) && !empty(trim($array['ABI']))) {
             $dettaglioPagamento->setABI($array['ABI']);
         }
-        if (isset($array['CAB'])) {
+        if (isset($array['CAB']) && !empty(trim($array['CAB']))) {
             $dettaglioPagamento->setCAB($array['CAB']);
         }
-        if (isset($array['BIC'])) {
+        if (isset($array['BIC']) && !empty(trim($array['BIC']))) {
             $dettaglioPagamento->setBIC($array['BIC']);
         }
-        if (isset($array['ScontoPagamentoAnticipato'])) {
+        if (isset($array['ScontoPagamentoAnticipato']) && !empty(trim($array['ScontoPagamentoAnticipato']))) {
             $dettaglioPagamento->setScontoPagamentoAnticipato($array['ScontoPagamentoAnticipato']);
         }
-        if (isset($array['DataLimitePagamentoAnticipato'])) {
+        if (isset($array['DataLimitePagamentoAnticipato']) && !empty(trim($array['DataLimitePagamentoAnticipato']))) {
             $dettaglioPagamento->setDataLimitePagamentoAnticipato($array['DataLimitePagamentoAnticipato']);
         }
-        if (isset($array['PenalitaPagamentiRitardati'])) {
+        if (isset($array['PenalitaPagamentiRitardati']) && !empty(trim($array['PenalitaPagamentiRitardati']))) {
             $dettaglioPagamento->setPenalitaPagamentiRitardati($array['PenalitaPagamentiRitardati']);
         }
-        if (isset($array['DataDecorrenzaPenale'])) {
+        if (isset($array['DataDecorrenzaPenale']) && !empty(trim($array['DataDecorrenzaPenale']))) {
             $dettaglioPagamento->setDataDecorrenzaPenale($array['DataDecorrenzaPenale']);
         }
-        if (isset($array['CodicePagamento'])) {
+        if (isset($array['CodicePagamento']) && !empty(trim($array['CodicePagamento']))) {
             $dettaglioPagamento->setCodicePagamento($array['CodicePagamento']);
         }
 

@@ -556,24 +556,27 @@ class DatiGeneraliDocumento implements FatturaElettronicaInterface
             $array['Divisa']
         );
 
-        if (isset($array['DatiRitenuta']['TipoRitenuta'])) {
+        if (isset($array['DatiRitenuta']['TipoRitenuta']) &&
+            !empty(trim($array['DatiRitenuta']['TipoRitenuta']))) {
             $datiGeneraliDocumento->setTipoRitenuta($array['DatiRitenuta']['TipoRitenuta']);
         }
-        if (isset($array['DatiRitenuta']['ImportoRitenuta'])) {
+        if (isset($array['DatiRitenuta']['ImportoRitenuta']) &&
+            !empty(trim($array['DatiRitenuta']['ImportoRitenuta']))) {
             $datiGeneraliDocumento->setImportoRitenuta($array['DatiRitenuta']['ImportoRitenuta']);
         }
-        if (isset($array['DatiRitenuta']['AliquotaRitenuta'])) {
+        if (isset($array['DatiRitenuta']['AliquotaRitenuta']) &&
+            !empty(trim($array['DatiRitenuta']['AliquotaRitenuta']))) {
             $datiGeneraliDocumento->setAliquotaRitenuta($array['DatiRitenuta']['AliquotaRitenuta']);
         }
-        if (isset($array['DatiRitenuta']['CausalePagamento'])) {
+        if (isset($array['DatiRitenuta']['CausalePagamento']) &&
+            !empty(trim($array['DatiRitenuta']['CausalePagamento']))) {
             $datiGeneraliDocumento->setCausalePagamento($array['DatiRitenuta']['CausalePagamento']);
         }
 
-
-        if (isset($array['DatiBollo']['BolloVirtuale'])) {
+        if (isset($array['DatiBollo']['BolloVirtuale']) && !empty(trim($array['DatiBollo']['BolloVirtuale']))) {
             $datiGeneraliDocumento->setBolloVirtuale($array['DatiBollo']['BolloVirtuale']);
         }
-        if (isset($array['DatiBollo']['ImportoBollo'])) {
+        if (isset($array['DatiBollo']['ImportoBollo']) && !empty(trim($array['DatiBollo']['ImportoBollo']))) {
             $datiGeneraliDocumento->setImportoBollo($array['DatiBollo']['ImportoBollo']);
         }
 
@@ -597,13 +600,14 @@ class DatiGeneraliDocumento implements FatturaElettronicaInterface
             }
         }
 
-        if (isset($array['ImportoTotaleDocumento'])) {
+        if (isset($array['ImportoTotaleDocumento']) && !empty(trim($array['ImportoTotaleDocumento']))) {
             $datiGeneraliDocumento->setImportoTotaleDocumento($array['ImportoTotaleDocumento']);
         }
 
-        if (isset($array['Arrotondamento'])) {
+        if (isset($array['Arrotondamento']) && !empty(trim($array['Arrotondamento']))) {
             $datiGeneraliDocumento->setArrotondamento($array['Arrotondamento']);
         }
+
         if (isset($array['Causale'])) {
             $datiGeneraliDocumento->setCausale($array['Causale']);
         }
@@ -611,6 +615,7 @@ class DatiGeneraliDocumento implements FatturaElettronicaInterface
         if (isset($array['Art73']) && $array['Art73'] == 'SI') {
             $datiGeneraliDocumento->setArt73(true);
         }
+
         return $datiGeneraliDocumento;
     }
 }

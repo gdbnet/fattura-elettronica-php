@@ -204,10 +204,10 @@ class Indirizzo implements FatturaElettronicaInterface
             $array['Nazione']
         );
 
-        if (isset($array['NumeroCivico'])) {
+        if (isset($array['NumeroCivico']) && !empty(trim($array['NumeroCivico']))) {
             $indirizzo->setNumeroCivico($array['NumeroCivico']);
         }
-        if (isset($array['Provincia'])) {
+        if (isset($array['Provincia']) && !empty(trim($array['Provincia']))) {
             $indirizzo->setProvincia($array['Provincia']);
         }
 

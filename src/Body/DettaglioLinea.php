@@ -509,28 +509,28 @@ class DettaglioLinea implements FatturaElettronicaInterface
             $array['AliquotaIVA']
         );
 
-        if (isset($array['TipoCessionePrestazione'])) {
+        if (isset($array['TipoCessionePrestazione']) && !empty(trim($array['TipoCessionePrestazione']))) {
             $dettaglioLinea->setTipoCessionePrestazione($array['TipoCessionePrestazione']);
         }
-        if (isset($array['Quantita'])) {
+        if (isset($array['Quantita']) && !empty(trim($array['Quantita']))) {
             $dettaglioLinea->setQuantita($array['Quantita']);
         }
-        if (isset($array['UnitaMisura'])) {
+        if (isset($array['UnitaMisura']) && !empty(trim($array['UnitaMisura']))) {
             $dettaglioLinea->setUnitaMisura($array['UnitaMisura']);
         }
-        if (isset($array['DataInizioPeriodo'])) {
+        if (isset($array['DataInizioPeriodo']) && !empty(trim($array['DataInizioPeriodo']))) {
             $dettaglioLinea->setDataInizioPeriodo($array['DataInizioPeriodo']);
         }
-        if (isset($array['DataFinePeriodo'])) {
+        if (isset($array['DataFinePeriodo']) && !empty(trim($array['DataFinePeriodo']))) {
             $dettaglioLinea->setDataFinePeriodo($array['DataFinePeriodo']);
         }
-        if (isset($array['Ritenuta'])) {
+        if (isset($array['Ritenuta']) && !empty(trim($array['Ritenuta']))) {
             $dettaglioLinea->setRitenuta($array['Ritenuta']);
         }
-        if (isset($array['Natura'])) {
+        if (isset($array['Natura']) && !empty(trim($array['Natura']))) {
             $dettaglioLinea->setNatura($array['Natura']);
         }
-        if (isset($array['RiferimentoAmministrazione'])) {
+        if (isset($array['RiferimentoAmministrazione']) && !empty(trim($array['RiferimentoAmministrazione']))) {
             $dettaglioLinea->setRiferimentoAmministrazione($array['RiferimentoAmministrazione']);
         }
 

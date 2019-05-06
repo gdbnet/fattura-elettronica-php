@@ -248,16 +248,16 @@ class DatiCassaPrevidenziale implements FatturaElettronicaInterface
             $array['AliquotaIVA']
         );
 
-        if (isset($array['ImponibileCassa'])) {
+        if (isset($array['ImponibileCassa']) && !empty(trim($array['ImponibileCassa']))) {
             $datiCassaPrevidenziale->setImponibileCassa($array['ImponibileCassa']);
         }
-        if (isset($array['Ritenuta'])) {
+        if (isset($array['Ritenuta']) && !empty(trim($array['Ritenuta']))) {
             $datiCassaPrevidenziale->setRitenuta($array['Ritenuta']);
         }
-        if (isset($array['Natura'])) {
+        if (isset($array['Natura']) && !empty(trim($array['Natura']))) {
             $datiCassaPrevidenziale->setNatura($array['Natura']);
         }
-        if (isset($array['RiferimentoAmministrazione'])) {
+        if (isset($array['RiferimentoAmministrazione']) && !empty(trim($array['RiferimentoAmministrazione']))) {
             $datiCassaPrevidenziale->setRiferimentoAmministrazione($array['RiferimentoAmministrazione']);
         }
 

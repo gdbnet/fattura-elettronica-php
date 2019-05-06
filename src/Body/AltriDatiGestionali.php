@@ -132,13 +132,13 @@ class AltriDatiGestionali implements FatturaElettronicaInterface
     {
         $altriDatiGestionali = new self($array['TipoDato']);
 
-        if (isset($array['RiferimentoTesto'])) {
+        if (isset($array['RiferimentoTesto']) && !empty(trim($array['RiferimentoTesto']))) {
             $altriDatiGestionali->setRiferimentoTesto($array['RiferimentoTesto']);
         }
-        if (isset($array['RiferimentoNumero'])) {
+        if (isset($array['RiferimentoNumero']) && !empty(trim($array['RiferimentoNumero']))) {
             $altriDatiGestionali->setRiferimentoNumero($array['RiferimentoNumero']);
         }
-        if (isset($array['RiferimentoData'])) {
+        if (isset($array['RiferimentoData']) && !empty(trim($array['RiferimentoData']))) {
             $altriDatiGestionali->setRiferimentoData($array['RiferimentoData']);
         }
 

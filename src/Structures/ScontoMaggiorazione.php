@@ -115,10 +115,10 @@ class ScontoMaggiorazione implements FatturaElettronicaInterface
     {
         $scontoMaggiorazione = new self($array['Tipo']);
 
-        if (isset($array['Percentuale'])) {
+        if (isset($array['Percentuale']) && !empty(trim($array['Percentuale']))) {
             $scontoMaggiorazione->setPercentuale($array['Percentuale']);
         }
-        if (isset($array['Importo'])) {
+        if (isset($array['Importo']) && !empty(trim($array['Importo']))) {
             $scontoMaggiorazione->setImporto($array['Importo']);
         }
 

@@ -255,13 +255,15 @@ class DatiTrasmissione implements FatturaElettronicaInterface
             $array['CodiceDestinatario']
         );
 
-        if (isset($array['ContattiTrasmittente']['Telefono'])) {
+        if (isset($array['ContattiTrasmittente']['Telefono']) &&
+            !empty(trim($array['ContattiTrasmittente']['Telefono']))) {
             $datiTrasmissione->setTelefono($array['ContattiTrasmittente']['Telefono']);
         }
-        if (isset($array['ContattiTrasmittente']['Email'])) {
+        if (isset($array['ContattiTrasmittente']['Email']) &&
+            !empty(trim($array['ContattiTrasmittente']['Email']))) {
             $datiTrasmissione->setEmail($array['ContattiTrasmittente']['Email']);
         }
-        if (isset($array['PECDestinatario'])) {
+        if (isset($array['PECDestinatario']) && !empty(trim($array['PECDestinatario']))) {
             $datiTrasmissione->setPECDestinatario($array['PECDestinatario']);
         }
 

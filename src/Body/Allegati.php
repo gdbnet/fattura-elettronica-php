@@ -159,13 +159,13 @@ class Allegati implements FatturaElettronicaInterface
     {
         $allegato = new self($array['NomeAttachment'], $array['Attachment']);
 
-        if (isset($array['AlgoritmoCompressione'])) {
+        if (isset($array['AlgoritmoCompressione']) && !empty(trim($array['AlgoritmoCompressione']))) {
             $allegato->setAlgoritmoCompressione($array['AlgoritmoCompressione']);
         }
-        if (isset($array['FormatoAttachment'])) {
+        if (isset($array['FormatoAttachment']) && !empty(trim($array['FormatoAttachment']))) {
             $allegato->setFormatoAttachment($array['FormatoAttachment']);
         }
-        if (isset($array['DescrizioneAttachment'])) {
+        if (isset($array['DescrizioneAttachment']) && !empty(trim($array['DescrizioneAttachment']))) {
             $allegato->setDescrizioneAttachment($array['DescrizioneAttachment']);
         }
 

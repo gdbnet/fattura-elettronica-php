@@ -116,10 +116,12 @@ class TerzoIntermediarioOSoggettoEmittente implements FatturaElettronicaInterfac
         $anagrafica = Anagrafica::fromArray($array['DatiAnagrafici']['Anagrafica']);
         $terzoIntermediarioOSoggettoEmittente = new self($anagrafica);
 
-        if (isset($array['DatiAnagrafici']['IdFiscaleIVA'])) {
+        if (isset($array['DatiAnagrafici']['IdFiscaleIVA']) &&
+            is_array($array['DatiAnagrafici']['IdFiscaleIVA'])) {
             $terzoIntermediarioOSoggettoEmittente->setIdFiscaleIVA(Fiscale::fromArray($array['DatiAnagrafici']['IdFiscaleIVA']));
         }
-        if (isset($array['DatiAnagrafici']['CodiceFiscale'])) {
+        if (isset($array['DatiAnagrafici']['CodiceFiscale']) &&
+            !empty(trim($array['DatiAnagrafici']['CodiceFiscale']))) {
             $terzoIntermediarioOSoggettoEmittente->setCodiceFiscale($array['DatiAnagrafici']['CodiceFiscale']);
         }
 

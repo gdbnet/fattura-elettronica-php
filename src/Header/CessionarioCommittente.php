@@ -286,26 +286,33 @@ class CessionarioCommittente implements FatturaElettronicaInterface
         $Sede = Indirizzo::fromArray($array['Sede']);
         $cessionarioCommittente = new self($Anagrafica, $Sede);
 
-        if (isset($array['DatiAnagrafici']['IdFiscaleIVA'])) {
+        if (isset($array['DatiAnagrafici']['IdFiscaleIVA']) &&
+            is_array($array['DatiAnagrafici']['IdFiscaleIVA'])) {
             $cessionarioCommittente->setIdFiscaleIVA(Fiscale::fromArray($array['DatiAnagrafici']['IdFiscaleIVA']));
         }
-        if (isset($array['DatiAnagrafici']['CodiceFiscale'])) {
+        if (isset($array['DatiAnagrafici']['CodiceFiscale']) &&
+            !empty(trim($array['DatiAnagrafici']['CodiceFiscale']))) {
             $cessionarioCommittente->setCodiceFiscale($array['DatiAnagrafici']['CodiceFiscale']);
         }
-        if (isset($array['StabileOrganizzazione'])) {
+
+        if (isset($array['StabileOrganizzazione']) && is_array($array['StabileOrganizzazione'])) {
             $cessionarioCommittente->setStabileOrganizzazione(Indirizzo::fromArray($array['StabileOrganizzazione']));
         }
 
-        if (isset($array['RappresentanteFiscale']['IdFiscaleIVA'])) {
+        if (isset($array['RappresentanteFiscale']['IdFiscaleIVA']) &&
+             is_array($array['RappresentanteFiscale']['IdFiscaleIVA'])) {
             $cessionarioCommittente->setRappresentanteFiscaleIdFiscaleIVA(Fiscale::fromArray($array['RappresentanteFiscale']['IdFiscaleIVA']));
         }
-        if (isset($array['RappresentanteFiscale']['Denominazione'])) {
+        if (isset($array['RappresentanteFiscale']['Denominazione']) &&
+            !empty(trim($array['RappresentanteFiscale']['Denominazione']))) {
             $cessionarioCommittente->setRappresentanteFiscaleDenominazione($array['RappresentanteFiscale']['Denominazione']);
         }
-        if (isset($array['RappresentanteFiscale']['Nome'])) {
+        if (isset($array['RappresentanteFiscale']['Nome']) &&
+            !empty(trim($array['RappresentanteFiscale']['Nome']))) {
             $cessionarioCommittente->setRappresentanteFiscaleNome($array['RappresentanteFiscale']['Nome']);
         }
-        if (isset($array['RappresentanteFiscale']['Cognome'])) {
+        if (isset($array['RappresentanteFiscale']['Cognome']) &&
+            !empty(trim($array['RappresentanteFiscale']['Cognome']))) {
             $cessionarioCommittente->setRappresentanteFiscaleCognome($array['RappresentanteFiscale']['Cognome']);
         }
 

@@ -257,19 +257,19 @@ class DatiRiepilogo implements FatturaElettronicaInterface
     {
         $datiRiepilogo = new self($array['AliquotaIVA'], $array['ImponibileImporto'], $array['Imposta']);
 
-        if (isset($array['Natura'])) {
+        if (isset($array['Natura']) && !empty(trim($array['Natura']))) {
             $datiRiepilogo->setNatura($array['Natura']);
         }
-        if (isset($array['SpeseAccessorie'])) {
+        if (isset($array['SpeseAccessorie']) && !empty(trim($array['SpeseAccessorie']))) {
             $datiRiepilogo->setSpeseAccessorie($array['SpeseAccessorie']);
         }
-        if (isset($array['Arrotondamento'])) {
+        if (isset($array['Arrotondamento']) && !empty(trim($array['Arrotondamento']))) {
             $datiRiepilogo->setArrotondamento($array['Arrotondamento']);
         }
-        if (isset($array['EsigibilitaIVA'])) {
+        if (isset($array['EsigibilitaIVA']) && !empty(trim($array['EsigibilitaIVA']))) {
             $datiRiepilogo->setEsigibilitaIVA($array['EsigibilitaIVA']);
         }
-        if (isset($array['RiferimentoNormativo'])) {
+        if (isset($array['RiferimentoNormativo']) && !empty(trim($array['RiferimentoNormativo']))) {
             $datiRiepilogo->setRiferimentoNormativo($array['RiferimentoNormativo']);
         }
 

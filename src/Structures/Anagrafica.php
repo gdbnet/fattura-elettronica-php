@@ -2,10 +2,7 @@
 
 namespace Manrix\FatturaElettronica\Structures;
 
-use Manrix\FatturaElettronica\FatturaElettronica;
 use Manrix\FatturaElettronica\FatturaElettronicaInterface;
-use Manrix\FatturaElettronica\Validation\ValidateError;
-use Manrix\FatturaElettronica\Validation\ValidateErrorContainer;
 
 class Anagrafica implements FatturaElettronicaInterface
 {
@@ -171,19 +168,19 @@ class Anagrafica implements FatturaElettronicaInterface
     {
         $anagrafica = new Anagrafica();
 
-        if (isset($array['Denominazione'])) {
+        if (isset($array['Denominazione']) && !empty(trim($array['Denominazione']))) {
             $anagrafica->setDenominazione($array['Denominazione']);
         }
-        if (isset($array['Nome'])) {
+        if (isset($array['Nome']) && !empty(trim($array['Nome']))) {
             $anagrafica->setNome($array['Nome']);
         }
-        if (isset($array['Cognome'])) {
+        if (isset($array['Cognome']) && !empty(trim($array['Cognome']))) {
             $anagrafica->setCognome($array['Cognome']);
         }
-        if (isset($array['Titolo'])) {
+        if (isset($array['Titolo']) && !empty(trim($array['Titolo']))) {
             $anagrafica->setTitolo($array['Titolo']);
         }
-        if (isset($array['CodEORI'])) {
+        if (isset($array['CodEORI']) && !empty(trim($array['CodEORI']))) {
             $anagrafica->setCodEORI($array['CodEORI']);
         }
 
