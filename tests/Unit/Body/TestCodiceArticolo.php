@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\CodiceArticolo;
+use Gdbnet\FatturaElettronica\Body\CodiceArticolo;
 use PHPUnit\Framework\TestCase;
 
 class TestCodiceArticolo extends TestCase

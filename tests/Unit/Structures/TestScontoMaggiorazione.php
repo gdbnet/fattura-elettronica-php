@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Structures;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Structures;
 
-use Manrix\FatturaElettronica\Structures\ScontoMaggiorazione;
+use Gdbnet\FatturaElettronica\Structures\ScontoMaggiorazione;
 use PHPUnit\Framework\TestCase;
 
 class TestscontoMaggiorazione extends TestCase

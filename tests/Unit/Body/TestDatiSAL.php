@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\DatiSAL;
+use Gdbnet\FatturaElettronica\Body\DatiSAL;
 use PHPUnit\Framework\TestCase;
 
 class TestDatiSAL extends TestCase

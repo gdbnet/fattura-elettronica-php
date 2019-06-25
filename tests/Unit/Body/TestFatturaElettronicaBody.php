@@ -1,16 +1,16 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\Allegati;
-use Manrix\FatturaElettronica\Body\DatiBeniServizi;
-use Manrix\FatturaElettronica\Body\DatiGenerali;
-use Manrix\FatturaElettronica\Body\DatiGeneraliDocumento;
-use Manrix\FatturaElettronica\Body\DatiPagamento;
-use Manrix\FatturaElettronica\Body\DatiVeicoli;
-use Manrix\FatturaElettronica\Body\DettaglioLinea;
-use Manrix\FatturaElettronica\Body\DettaglioPagamento;
-use Manrix\FatturaElettronica\Body\FatturaElettronicaBody;
+use Gdbnet\FatturaElettronica\Body\Allegati;
+use Gdbnet\FatturaElettronica\Body\DatiBeniServizi;
+use Gdbnet\FatturaElettronica\Body\DatiGenerali;
+use Gdbnet\FatturaElettronica\Body\DatiGeneraliDocumento;
+use Gdbnet\FatturaElettronica\Body\DatiPagamento;
+use Gdbnet\FatturaElettronica\Body\DatiVeicoli;
+use Gdbnet\FatturaElettronica\Body\DettaglioLinea;
+use Gdbnet\FatturaElettronica\Body\DettaglioPagamento;
+use Gdbnet\FatturaElettronica\Body\FatturaElettronicaBody;
 use PHPUnit\Framework\TestCase;
 
 class TestFatturaElettronicaBody extends TestCase
@@ -111,7 +111,7 @@ class TestFatturaElettronicaBody extends TestCase
      * @param DatiPagamento $datiPagamento
      * @param Allegati $allegati
      * @return FatturaElettronicaBody
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_returns_correct_array(
         FatturaElettronicaBody $fatturaElettronicaBody,
@@ -139,7 +139,7 @@ class TestFatturaElettronicaBody extends TestCase
     /**
      * @depends test_class_returns_correct_array
      * @param FatturaElettronicaBody $fatturaElettronicaBody
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_is_created_from_array(FatturaElettronicaBody $fatturaElettronicaBody)
     {

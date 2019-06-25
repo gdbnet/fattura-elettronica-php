@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Body;
+namespace Gdbnet\FatturaElettronica\Body;
 
-use Manrix\FatturaElettronica\FatturaElettronicaInterface;
+use Gdbnet\FatturaElettronica\FatturaElettronicaInterface;
 
 class DatiVeicoli implements FatturaElettronicaInterface
 {

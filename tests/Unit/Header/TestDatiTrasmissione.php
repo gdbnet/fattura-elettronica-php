@@ -1,9 +1,9 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Header;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Header;
 
-use Manrix\FatturaElettronica\Header\DatiTrasmissione;
-use Manrix\FatturaElettronica\Structures\Fiscale;
+use Gdbnet\FatturaElettronica\Header\DatiTrasmissione;
+use Gdbnet\FatturaElettronica\Structures\Fiscale;
 use PHPUnit\Framework\TestCase;
 
 class TestDatiTrasmissione extends TestCase
@@ -21,7 +21,7 @@ class TestDatiTrasmissione extends TestCase
      * @depends test_class_fiscale_is_created
      * @param Fiscale $fiscale
      * @return DatiTrasmissione
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_is_created(Fiscale $fiscale)
     {
@@ -41,7 +41,7 @@ class TestDatiTrasmissione extends TestCase
      * @depends test_class_is_created
      * @param Fiscale $fiscale
      * @return DatiTrasmissione
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_returns_correct_array(DatiTrasmissione $datiTrasmissione)
     {
@@ -67,7 +67,7 @@ class TestDatiTrasmissione extends TestCase
     /**
      * @depends test_class_returns_correct_array
      * @param DatiTrasmissione $datiTrasmissione
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_is_created_from_array(DatiTrasmissione $datiTrasmissione)
     {

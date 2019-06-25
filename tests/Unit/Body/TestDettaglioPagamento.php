@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\DettaglioPagamento;
+use Gdbnet\FatturaElettronica\Body\DettaglioPagamento;
 use PHPUnit\Framework\TestCase;
 
 class TestDettaglioPagamento extends TestCase

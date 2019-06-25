@@ -1,10 +1,10 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\DatiBeniServizi;
-use Manrix\FatturaElettronica\Body\DatiRiepilogo;
-use Manrix\FatturaElettronica\Body\DettaglioLinea;
+use Gdbnet\FatturaElettronica\Body\DatiBeniServizi;
+use Gdbnet\FatturaElettronica\Body\DatiRiepilogo;
+use Gdbnet\FatturaElettronica\Body\DettaglioLinea;
 use PHPUnit\Framework\TestCase;
 
 class TestDatiBeniServizi extends TestCase

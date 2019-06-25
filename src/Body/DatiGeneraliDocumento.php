@@ -1,10 +1,10 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Body;
+namespace Gdbnet\FatturaElettronica\Body;
 
-use Manrix\FatturaElettronica\FatturaElettronicaException;
-use Manrix\FatturaElettronica\FatturaElettronicaInterface;
-use Manrix\FatturaElettronica\Structures\ScontoMaggiorazione;
+use Gdbnet\FatturaElettronica\FatturaElettronicaException;
+use Gdbnet\FatturaElettronica\FatturaElettronicaInterface;
+use Gdbnet\FatturaElettronica\Structures\ScontoMaggiorazione;
 
 class DatiGeneraliDocumento implements FatturaElettronicaInterface
 {

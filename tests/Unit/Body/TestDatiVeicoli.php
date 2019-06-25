@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\DatiVeicoli;
+use Gdbnet\FatturaElettronica\Body\DatiVeicoli;
 use PHPUnit\Framework\TestCase;
 
 class TestDatiVeicoli extends TestCase

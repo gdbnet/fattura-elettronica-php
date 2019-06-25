@@ -1,10 +1,10 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Header;
+namespace Gdbnet\FatturaElettronica\Header;
 
-use Manrix\FatturaElettronica\AbstractModel;
-use Manrix\FatturaElettronica\FatturaElettronicaException;
-use Manrix\FatturaElettronica\FatturaElettronicaInterface;
+use Gdbnet\FatturaElettronica\AbstractModel;
+use Gdbnet\FatturaElettronica\FatturaElettronicaException;
+use Gdbnet\FatturaElettronica\FatturaElettronicaInterface;
 
 class FatturaElettronicaHeader extends AbstractModel implements FatturaElettronicaInterface
 {

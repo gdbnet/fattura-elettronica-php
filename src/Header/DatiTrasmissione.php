@@ -1,10 +1,10 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Header;
+namespace Gdbnet\FatturaElettronica\Header;
 
-use Manrix\FatturaElettronica\FatturaElettronicaException;
-use Manrix\FatturaElettronica\FatturaElettronicaInterface;
-use Manrix\FatturaElettronica\Structures\Fiscale;
+use Gdbnet\FatturaElettronica\FatturaElettronicaException;
+use Gdbnet\FatturaElettronica\FatturaElettronicaInterface;
+use Gdbnet\FatturaElettronica\Structures\Fiscale;
 
 class DatiTrasmissione implements FatturaElettronicaInterface
 {

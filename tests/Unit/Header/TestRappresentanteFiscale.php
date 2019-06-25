@@ -1,10 +1,10 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Header;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Header;
 
-use Manrix\FatturaElettronica\Header\RappresentanteFiscale;
-use Manrix\FatturaElettronica\Structures\Anagrafica;
-use Manrix\FatturaElettronica\Structures\Fiscale;
+use Gdbnet\FatturaElettronica\Header\RappresentanteFiscale;
+use Gdbnet\FatturaElettronica\Structures\Anagrafica;
+use Gdbnet\FatturaElettronica\Structures\Fiscale;
 use PHPUnit\Framework\TestCase;
 
 class TestRappresentanteFiscale extends TestCase

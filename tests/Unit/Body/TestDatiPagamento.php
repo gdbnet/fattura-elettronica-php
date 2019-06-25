@@ -1,9 +1,9 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\DatiPagamento;
-use Manrix\FatturaElettronica\Body\DettaglioPagamento;
+use Gdbnet\FatturaElettronica\Body\DatiPagamento;
+use Gdbnet\FatturaElettronica\Body\DettaglioPagamento;
 use PHPUnit\Framework\TestCase;
 
 class TestDatiPagamento extends TestCase
@@ -32,7 +32,7 @@ class TestDatiPagamento extends TestCase
      * @param DatiPagamento $datiPagamento
      * @param DettaglioPagamento $dettaglioPagamento
      * @return DatiPagamento
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_returns_correct_array(
         DatiPagamento $datiPagamento,
@@ -54,7 +54,7 @@ class TestDatiPagamento extends TestCase
     /**
      * @depends test_class_returns_correct_array
      * @param DatiPagamento $datiPagamento
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_is_created_from_array(DatiPagamento $datiPagamento)
     {

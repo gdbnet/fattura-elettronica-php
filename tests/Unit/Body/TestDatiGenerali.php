@@ -1,14 +1,14 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\DatiDDT;
-use Manrix\FatturaElettronica\Body\DatiGenerali;
-use Manrix\FatturaElettronica\Body\DatiGeneraliDocumento;
-use Manrix\FatturaElettronica\Body\DatiSAL;
-use Manrix\FatturaElettronica\Body\DatiTrasporto;
-use Manrix\FatturaElettronica\Structures\DatiRiferimento;
-use Manrix\FatturaElettronica\Structures\Fiscale;
+use Gdbnet\FatturaElettronica\Body\DatiDDT;
+use Gdbnet\FatturaElettronica\Body\DatiGenerali;
+use Gdbnet\FatturaElettronica\Body\DatiGeneraliDocumento;
+use Gdbnet\FatturaElettronica\Body\DatiSAL;
+use Gdbnet\FatturaElettronica\Body\DatiTrasporto;
+use Gdbnet\FatturaElettronica\Structures\DatiRiferimento;
+use Gdbnet\FatturaElettronica\Structures\Fiscale;
 use PHPUnit\Framework\TestCase;
 
 class TestDatiGenerali extends TestCase
@@ -101,7 +101,7 @@ class TestDatiGenerali extends TestCase
      * @param DatiDDT $datiDDT
      * @param DatiTrasporto $datiTrasporto
      * @return DatiGenerali
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_returns_correct_array(
         DatiGenerali $datiGenerali,
@@ -142,7 +142,7 @@ class TestDatiGenerali extends TestCase
     /**
      * @depends test_class_returns_correct_array
      * @param DatiGenerali $datiGenerali
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_is_created_from_array(DatiGenerali $datiGenerali)
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit;
+namespace Gdbnet\FatturaElettronica\Tests\Unit;
 
-use Manrix\FatturaElettronica\FatturaElettronica;
-use Manrix\FatturaElettronica\FatturaElettronicaXmlReader;
-use Manrix\FatturaElettronica\Header\FatturaElettronicaHeader;
+use Gdbnet\FatturaElettronica\FatturaElettronica;
+use Gdbnet\FatturaElettronica\FatturaElettronicaXmlReader;
+use Gdbnet\FatturaElettronica\Header\FatturaElettronicaHeader;
 use PHPUnit\Framework\TestCase;
 
 class TestFatturaElettronicaXmlReader extends TestCase

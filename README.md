@@ -2,7 +2,7 @@
 
 A PHP package to read and write the xml of italian electronic invoice.
 
-    composer require manrix/fattura-elettronica-php
+    composer require Gdbnet/fattura-elettronica-php
 
 ## Usage
 
@@ -30,6 +30,4 @@ Validate the xml using the xsd:
     
 ## Credits
 
-Inspired by `advinser/php-fattura-elettronica-xml`
-
-Xml validation by `deved/fattura-elettronica`
+Forked from manrix/fattura-elettronica-php

@@ -1,11 +1,11 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Header;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Header;
 
-use Manrix\FatturaElettronica\Header\CedentePrestatore;
-use Manrix\FatturaElettronica\Structures\Anagrafica;
-use Manrix\FatturaElettronica\Structures\Fiscale;
-use Manrix\FatturaElettronica\Structures\Indirizzo;
+use Gdbnet\FatturaElettronica\Header\CedentePrestatore;
+use Gdbnet\FatturaElettronica\Structures\Anagrafica;
+use Gdbnet\FatturaElettronica\Structures\Fiscale;
+use Gdbnet\FatturaElettronica\Structures\Indirizzo;
 use PHPUnit\Framework\TestCase;
 
 class TestCedentePrestatore extends TestCase
@@ -56,7 +56,7 @@ class TestCedentePrestatore extends TestCase
      * @depends test_class_indirizzo_is_created
      * @param CedentePrestatore $cedentePrestatore
      * @return CedentePrestatore
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_returns_correct_array(CedentePrestatore $cedentePrestatore, Indirizzo $indirizzo)
     {
@@ -109,7 +109,7 @@ class TestCedentePrestatore extends TestCase
     /**
      * @depends test_class_returns_correct_array
      * @param CedentePrestatore $cedentePrestatore
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_is_created_from_array(CedentePrestatore $cedentePrestatore)
     {

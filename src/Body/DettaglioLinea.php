@@ -1,9 +1,9 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Body;
+namespace Gdbnet\FatturaElettronica\Body;
 
-use Manrix\FatturaElettronica\FatturaElettronicaInterface;
-use Manrix\FatturaElettronica\Structures\ScontoMaggiorazione;
+use Gdbnet\FatturaElettronica\FatturaElettronicaInterface;
+use Gdbnet\FatturaElettronica\Structures\ScontoMaggiorazione;
 
 class DettaglioLinea implements FatturaElettronicaInterface
 {

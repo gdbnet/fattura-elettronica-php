@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Structures;
+namespace Gdbnet\FatturaElettronica\Structures;
 
-use Manrix\FatturaElettronica\FatturaElettronicaInterface;
+use Gdbnet\FatturaElettronica\FatturaElettronicaInterface;
 
 class ScontoMaggiorazione implements FatturaElettronicaInterface
 {

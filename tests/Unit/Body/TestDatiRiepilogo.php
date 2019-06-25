@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\DatiRiepilogo;
+use Gdbnet\FatturaElettronica\Body\DatiRiepilogo;
 use PHPUnit\Framework\TestCase;
 
 class TestDatiRiepilogo extends TestCase

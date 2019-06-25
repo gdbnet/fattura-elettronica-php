@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Structures;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Structures;
 
-use Manrix\FatturaElettronica\Structures\Anagrafica;
+use Gdbnet\FatturaElettronica\Structures\Anagrafica;
 use PHPUnit\Framework\TestCase;
 
 class TestAnagrafica extends TestCase

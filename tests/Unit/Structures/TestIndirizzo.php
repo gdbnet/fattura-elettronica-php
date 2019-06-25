@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Structures;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Structures;
 
-use Manrix\FatturaElettronica\Structures\Indirizzo;
+use Gdbnet\FatturaElettronica\Structures\Indirizzo;
 use PHPUnit\Framework\TestCase;
 
 class TestIndirizzo extends TestCase

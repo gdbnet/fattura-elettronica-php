@@ -1,11 +1,11 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\AltriDatiGestionali;
-use Manrix\FatturaElettronica\Body\CodiceArticolo;
-use Manrix\FatturaElettronica\Body\DettaglioLinea;
-use Manrix\FatturaElettronica\Structures\ScontoMaggiorazione;
+use Gdbnet\FatturaElettronica\Body\AltriDatiGestionali;
+use Gdbnet\FatturaElettronica\Body\CodiceArticolo;
+use Gdbnet\FatturaElettronica\Body\DettaglioLinea;
+use Gdbnet\FatturaElettronica\Structures\ScontoMaggiorazione;
 use PHPUnit\Framework\TestCase;
 
 class TestDettaglioLinea extends TestCase

@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\DatiDDT;
+use Gdbnet\FatturaElettronica\Body\DatiDDT;
 use PHPUnit\Framework\TestCase;
 
 class TestDatiDDT extends TestCase

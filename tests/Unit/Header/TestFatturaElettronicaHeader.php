@@ -1,16 +1,16 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Header;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Header;
 
-use Manrix\FatturaElettronica\Header\CedentePrestatore;
-use Manrix\FatturaElettronica\Header\CessionarioCommittente;
-use Manrix\FatturaElettronica\Header\DatiTrasmissione;
-use Manrix\FatturaElettronica\Header\FatturaElettronicaHeader;
-use Manrix\FatturaElettronica\Header\RappresentanteFiscale;
-use Manrix\FatturaElettronica\Header\TerzoIntermediarioOSoggettoEmittente;
-use Manrix\FatturaElettronica\Structures\Anagrafica;
-use Manrix\FatturaElettronica\Structures\Fiscale;
-use Manrix\FatturaElettronica\Structures\Indirizzo;
+use Gdbnet\FatturaElettronica\Header\CedentePrestatore;
+use Gdbnet\FatturaElettronica\Header\CessionarioCommittente;
+use Gdbnet\FatturaElettronica\Header\DatiTrasmissione;
+use Gdbnet\FatturaElettronica\Header\FatturaElettronicaHeader;
+use Gdbnet\FatturaElettronica\Header\RappresentanteFiscale;
+use Gdbnet\FatturaElettronica\Header\TerzoIntermediarioOSoggettoEmittente;
+use Gdbnet\FatturaElettronica\Structures\Anagrafica;
+use Gdbnet\FatturaElettronica\Structures\Fiscale;
+use Gdbnet\FatturaElettronica\Structures\Indirizzo;
 use PHPUnit\Framework\TestCase;
 
 class TestFatturaElettronicaHeader extends TestCase
@@ -28,7 +28,7 @@ class TestFatturaElettronicaHeader extends TestCase
      * @depends test_class_fiscale_is_created
      * @param Fiscale $fiscale
      * @return DatiTrasmissione
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_dati_trasmissione_is_created(Fiscale $fiscale)
     {
@@ -95,7 +95,7 @@ class TestFatturaElettronicaHeader extends TestCase
      * @depends test_class_cedente_prestatore_is_created
      * @depends test_class_cessionario_committente_is_created
      * @return FatturaElettronicaHeader
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_is_created(
         DatiTrasmissione $datiTrasmissione,
@@ -147,7 +147,7 @@ class TestFatturaElettronicaHeader extends TestCase
      * @depends test_class_rapresentante_fiscale_is_created
      * @depends test_class_terzo_intermediario_o_soggetto_emittente_is_created
      * @return FatturaElettronicaHeader
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_returns_correct_array(
         FatturaElettronicaHeader $fatturaElettronicaHeader,
@@ -175,7 +175,7 @@ class TestFatturaElettronicaHeader extends TestCase
     /**
      * @depends test_class_returns_correct_array
      * @param FatturaElettronicaHeader $fatturaElettronicaHeader
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_is_created_from_array(FatturaElettronicaHeader $fatturaElettronicaHeader)
     {

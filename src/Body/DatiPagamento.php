@@ -1,9 +1,9 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Body;
+namespace Gdbnet\FatturaElettronica\Body;
 
-use Manrix\FatturaElettronica\FatturaElettronicaException;
-use Manrix\FatturaElettronica\FatturaElettronicaInterface;
+use Gdbnet\FatturaElettronica\FatturaElettronicaException;
+use Gdbnet\FatturaElettronica\FatturaElettronicaInterface;
 
 class DatiPagamento implements FatturaElettronicaInterface
 {

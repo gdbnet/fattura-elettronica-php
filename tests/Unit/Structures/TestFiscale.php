@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Structures;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Structures;
 
-use Manrix\FatturaElettronica\Structures\Fiscale;
+use Gdbnet\FatturaElettronica\Structures\Fiscale;
 use PHPUnit\Framework\TestCase;
 
 class TestFiscale extends TestCase

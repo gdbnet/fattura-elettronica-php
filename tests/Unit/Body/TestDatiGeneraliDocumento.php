@@ -1,10 +1,10 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\DatiCassaPrevidenziale;
-use Manrix\FatturaElettronica\Body\DatiGeneraliDocumento;
-use Manrix\FatturaElettronica\Structures\ScontoMaggiorazione;
+use Gdbnet\FatturaElettronica\Body\DatiCassaPrevidenziale;
+use Gdbnet\FatturaElettronica\Body\DatiGeneraliDocumento;
+use Gdbnet\FatturaElettronica\Structures\ScontoMaggiorazione;
 use PHPUnit\Framework\TestCase;
 
 class TestDatiGeneraliDocumento extends TestCase
@@ -53,7 +53,7 @@ class TestDatiGeneraliDocumento extends TestCase
      * @param ScontoMaggiorazione $scontoMaggiorazione
      * @param DatiCassaPrevidenziale $datiCassaPrevidenziale
      * @return DatiGeneraliDocumento
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_returns_correct_array(
         DatiGeneraliDocumento $datiGeneraliDocumento,
@@ -96,7 +96,7 @@ class TestDatiGeneraliDocumento extends TestCase
     /**
      * @depends test_class_returns_correct_array
      * @param DatiGeneraliDocumento $datiGeneraliDocumento
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_is_created_from_array(DatiGeneraliDocumento $datiGeneraliDocumento)
     {

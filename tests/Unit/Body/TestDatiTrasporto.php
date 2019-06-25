@@ -1,11 +1,11 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\DatiTrasporto;
-use Manrix\FatturaElettronica\Structures\Anagrafica;
-use Manrix\FatturaElettronica\Structures\Fiscale;
-use Manrix\FatturaElettronica\Structures\Indirizzo;
+use Gdbnet\FatturaElettronica\Body\DatiTrasporto;
+use Gdbnet\FatturaElettronica\Structures\Anagrafica;
+use Gdbnet\FatturaElettronica\Structures\Fiscale;
+use Gdbnet\FatturaElettronica\Structures\Indirizzo;
 use PHPUnit\Framework\TestCase;
 
 class TestDatiTrasporto extends TestCase

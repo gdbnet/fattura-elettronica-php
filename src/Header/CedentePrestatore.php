@@ -1,12 +1,12 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Header;
+namespace Gdbnet\FatturaElettronica\Header;
 
-use Manrix\FatturaElettronica\FatturaElettronicaInterface;
-use Manrix\FatturaElettronica\Structures\Anagrafica;
-use Manrix\FatturaElettronica\Structures\Fiscale;
-use Manrix\FatturaElettronica\Structures\Indirizzo;
-use Manrix\FatturaElettronica\FatturaElettronicaException;
+use Gdbnet\FatturaElettronica\FatturaElettronicaInterface;
+use Gdbnet\FatturaElettronica\Structures\Anagrafica;
+use Gdbnet\FatturaElettronica\Structures\Fiscale;
+use Gdbnet\FatturaElettronica\Structures\Indirizzo;
+use Gdbnet\FatturaElettronica\FatturaElettronicaException;
 
 class CedentePrestatore implements FatturaElettronicaInterface
 {

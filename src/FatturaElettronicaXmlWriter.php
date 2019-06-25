@@ -1,6 +1,6 @@
 <?php
 
-namespace Manrix\FatturaElettronica;
+namespace Gdbnet\FatturaElettronica;
 
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Serializer;

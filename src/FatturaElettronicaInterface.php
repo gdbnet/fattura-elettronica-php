@@ -1,6 +1,6 @@
 <?php
 
-namespace Manrix\FatturaElettronica;
+namespace Gdbnet\FatturaElettronica;
 
 interface FatturaElettronicaInterface
 {

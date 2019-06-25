@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Header;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Header;
 
-use Manrix\FatturaElettronica\Header\CessionarioCommittente;
-use Manrix\FatturaElettronica\Structures\Anagrafica;
-use Manrix\FatturaElettronica\Structures\Fiscale;
-use Manrix\FatturaElettronica\Structures\Indirizzo;
+use Gdbnet\FatturaElettronica\Header\CessionarioCommittente;
+use Gdbnet\FatturaElettronica\Structures\Anagrafica;
+use Gdbnet\FatturaElettronica\Structures\Fiscale;
+use Gdbnet\FatturaElettronica\Structures\Indirizzo;
 use PHPUnit\Framework\TestCase;
 
 class TestCessionarioCommittente extends TestCase
@@ -91,7 +91,7 @@ class TestCessionarioCommittente extends TestCase
     /**
      * @depends test_class_returns_correct_array
      * @param CessionarioCommittente $cessionarioCommittente
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_is_created_from_array(CessionarioCommittente $cessionarioCommittente)
     {

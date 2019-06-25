@@ -1,6 +1,6 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Codifiche;
+namespace Gdbnet\FatturaElettronica\Codifiche;
 
 abstract class RegimeFiscale
 {

@@ -1,10 +1,11 @@
 <?php
 
-namespace Manrix\FatturaElettronica;
+namespace Gdbnet\FatturaElettronica;
 
+use Exception;
 use Throwable;
 
-class FatturaElettronicaException extends \Exception
+class FatturaElettronicaException extends Exception
 {
     /**
      * FatturaElettronicaException constructor.

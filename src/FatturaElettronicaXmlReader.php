@@ -1,8 +1,7 @@
 <?php
 
-namespace Manrix\FatturaElettronica;
+namespace Gdbnet\FatturaElettronica;
 
-use Manrix\FatturaElettronica\XmlValidator;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 
 class FatturaElettronicaXmlReader

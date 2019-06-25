@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\DatiCassaPrevidenziale;
+use Gdbnet\FatturaElettronica\Body\DatiCassaPrevidenziale;
 use PHPUnit\Framework\TestCase;
 
 class TestDatiCassaPrevidenziale extends TestCase

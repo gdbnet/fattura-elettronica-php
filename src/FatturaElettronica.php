@@ -1,11 +1,11 @@
 <?php
 
-namespace Manrix\FatturaElettronica;
+namespace Gdbnet\FatturaElettronica;
 
-use Manrix\FatturaElettronica\Body\FatturaElettronicaBody;
-use Manrix\FatturaElettronica\Header\CedentePrestatore;
-use Manrix\FatturaElettronica\Header\CessionarioCommittente;
-use Manrix\FatturaElettronica\Header\FatturaElettronicaHeader;
+use Gdbnet\FatturaElettronica\Body\FatturaElettronicaBody;
+use Gdbnet\FatturaElettronica\Header\CedentePrestatore;
+use Gdbnet\FatturaElettronica\Header\CessionarioCommittente;
+use Gdbnet\FatturaElettronica\Header\FatturaElettronicaHeader;
 
 class FatturaElettronica
 {

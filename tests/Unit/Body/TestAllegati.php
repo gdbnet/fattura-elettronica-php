@@ -1,8 +1,8 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit\Body;
+namespace Gdbnet\FatturaElettronica\Tests\Unit\Body;
 
-use Manrix\FatturaElettronica\Body\Allegati;
+use Gdbnet\FatturaElettronica\Body\Allegati;
 use PHPUnit\Framework\TestCase;
 
 class TestAllegati extends TestCase

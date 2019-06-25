@@ -1,6 +1,9 @@
 <?php
 
-namespace Manrix\FatturaElettronica;
+namespace Gdbnet\FatturaElettronica;
+
+use DOMDocument;
+use InvalidArgumentException;
 
 class XmlValidator
 {
@@ -37,14 +40,14 @@ class XmlValidator
         }
 
         if ('' === trim($xml)) {
-            throw new \InvalidArgumentException(sprintf('File %s does not contain valid XML, it is empty.', $xml));
+            throw new InvalidArgumentException(sprintf('File %s does not contain valid XML, it is empty.', $xml));
         }
 
         $internalErrors = libxml_use_internal_errors(true);
         $disableEntities = libxml_disable_entity_loader(true);
         libxml_clear_errors();
 
-        $dom = new \DOMDocument();
+        $dom = new DOMDocument();
         $dom->validateOnParse = true;
         if (!$dom->loadXML($xml, LIBXML_NONET | (defined('LIBXML_COMPACT') ? LIBXML_COMPACT : 0))) {
             libxml_disable_entity_loader($disableEntities);
@@ -59,7 +62,7 @@ class XmlValidator
 
         foreach ($dom->childNodes as $child) {
             if ($child->nodeType === XML_DOCUMENT_TYPE_NODE) {
-                throw new \InvalidArgumentException('Document types are not allowed.');
+                throw new InvalidArgumentException('Document types are not allowed.');
             }
         }
 
@@ -73,7 +76,7 @@ class XmlValidator
             } else {
                 libxml_use_internal_errors($internalErrors);
 
-                throw new \InvalidArgumentException('The schema argument has to be a valid path to XSD file or callable.');
+                throw new InvalidArgumentException('The schema argument has to be a valid path to XSD file or callable.');
             }
 
             if (!$valid) {

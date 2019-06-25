@@ -1,27 +1,27 @@
 <?php
 
-namespace Manrix\FatturaElettronica\Tests\Unit;
+namespace Gdbnet\FatturaElettronica\Tests\Unit;
 
-use Manrix\FatturaElettronica\Body\DatiBeniServizi;
-use Manrix\FatturaElettronica\Body\DatiGenerali;
-use Manrix\FatturaElettronica\Body\DatiGeneraliDocumento;
-use Manrix\FatturaElettronica\Body\DatiPagamento;
-use Manrix\FatturaElettronica\Body\DatiRiepilogo;
-use Manrix\FatturaElettronica\Body\DatiTrasporto;
-use Manrix\FatturaElettronica\Body\DettaglioLinea;
-use Manrix\FatturaElettronica\Body\DettaglioPagamento;
-use Manrix\FatturaElettronica\Body\FatturaElettronicaBody;
-use Manrix\FatturaElettronica\FatturaElettronica;
-use Manrix\FatturaElettronica\FatturaElettronicaXmlWriter;
-use Manrix\FatturaElettronica\Header\CedentePrestatore;
-use Manrix\FatturaElettronica\Header\CessionarioCommittente;
-use Manrix\FatturaElettronica\Header\DatiTrasmissione;
-use Manrix\FatturaElettronica\Header\FatturaElettronicaHeader;
-use Manrix\FatturaElettronica\Structures\Anagrafica;
-use Manrix\FatturaElettronica\Structures\DatiRiferimento;
-use Manrix\FatturaElettronica\Structures\Fiscale;
-use Manrix\FatturaElettronica\Structures\Indirizzo;
-use Manrix\FatturaElettronica\XmlValidator;
+use Gdbnet\FatturaElettronica\Body\DatiBeniServizi;
+use Gdbnet\FatturaElettronica\Body\DatiGenerali;
+use Gdbnet\FatturaElettronica\Body\DatiGeneraliDocumento;
+use Gdbnet\FatturaElettronica\Body\DatiPagamento;
+use Gdbnet\FatturaElettronica\Body\DatiRiepilogo;
+use Gdbnet\FatturaElettronica\Body\DatiTrasporto;
+use Gdbnet\FatturaElettronica\Body\DettaglioLinea;
+use Gdbnet\FatturaElettronica\Body\DettaglioPagamento;
+use Gdbnet\FatturaElettronica\Body\FatturaElettronicaBody;
+use Gdbnet\FatturaElettronica\FatturaElettronica;
+use Gdbnet\FatturaElettronica\FatturaElettronicaXmlWriter;
+use Gdbnet\FatturaElettronica\Header\CedentePrestatore;
+use Gdbnet\FatturaElettronica\Header\CessionarioCommittente;
+use Gdbnet\FatturaElettronica\Header\DatiTrasmissione;
+use Gdbnet\FatturaElettronica\Header\FatturaElettronicaHeader;
+use Gdbnet\FatturaElettronica\Structures\Anagrafica;
+use Gdbnet\FatturaElettronica\Structures\DatiRiferimento;
+use Gdbnet\FatturaElettronica\Structures\Fiscale;
+use Gdbnet\FatturaElettronica\Structures\Indirizzo;
+use Gdbnet\FatturaElettronica\XmlValidator;
 use PHPUnit\Framework\TestCase;
 
 class TestFatturaElettronicaXmlWriter extends TestCase
@@ -39,7 +39,7 @@ class TestFatturaElettronicaXmlWriter extends TestCase
      * @depends test_class_fiscale_is_created
      * @param Fiscale $fiscale
      * @return DatiTrasmissione
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_dati_trasmissione_is_created(Fiscale $fiscale)
     {
@@ -89,7 +89,7 @@ class TestFatturaElettronicaXmlWriter extends TestCase
      * @depends test_class_cedente_prestatore_is_created
      * @depends test_class_cessionario_committente_is_created
      * @return FatturaElettronicaHeader
-     * @throws \Manrix\FatturaElettronica\FatturaElettronicaException
+     * @throws \Gdbnet\FatturaElettronica\FatturaElettronicaException
      */
     public function test_class_fattura_elettronica_header_is_created(
         DatiTrasmissione $datiTrasmissione,
