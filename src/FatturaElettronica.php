@@ -30,6 +30,11 @@ class FatturaElettronica
     protected $lotto = false;
 
     /**
+     * @var FatturaElettronicaPrinterInterface
+     */
+    private $output;
+
+    /**
      * FatturaElettronica constructor.
      * @param FatturaElettronicaHeader $header
      * @param FatturaElettronicaBody $body
@@ -294,5 +299,21 @@ class FatturaElettronica
         $this->versione = $versione;
 
         return $this;
+    }
+
+    /**
+     * @param FatturaElettronicaPrinterInterface $output
+     */
+    public function setOutput(FatturaElettronicaPrinterInterface $output): void
+    {
+        $this->output = $output;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOutput()
+    {
+        return $this->output->stampa(new FatturaElettronicaXmlWriter($this));
     }
 }
