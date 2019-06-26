@@ -6,6 +6,7 @@
         "fattura",
         "xml"
     ],
+    "version": "1.0.3",
     "type": "library",
     "license": "GPL-3.0-or-later",
     "minimum-stability": "dev",
