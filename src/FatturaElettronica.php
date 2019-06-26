@@ -135,6 +135,25 @@ class FatturaElettronica
     }
 
     /**
+     * @return array
+     * @throws FatturaElettronicaException
+     */
+    public function getDescrizione()
+    {
+        if ($this->isLotto()) {
+            throw new FatturaElettronicaException("There are multiple body, that means that is non a single 'FatturaElettronica', but a 'Lotto di fatture'. 'Descrizione' can't be returned safely");
+        }
+
+        $descrizione = [];
+
+        foreach ($this->getBodys()[0]->getDatiBeniServizi()->getDettaglioLinee() as $dettaglioLinea) {
+            array_push($descrizione, $dettaglioLinea->getDescrizione());
+        }
+
+        return $descrizione;
+    }
+
+    /**
      * @return bool
      */
     public function isLotto(): bool
