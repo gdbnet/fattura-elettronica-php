@@ -49,7 +49,7 @@ class FatturaElettronicaXmlReader
      * @param string $input
      * @return string
      */
-    public function clearSignature(string $input)
+    public static function clearSignature(string $input)
     {
         $input = substr($input, strpos($input, '<?xml '));
         preg_match_all('/<\/.+?>/', $input, $matches, PREG_OFFSET_CAPTURE);
