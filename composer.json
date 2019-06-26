@@ -1,5 +1,5 @@
 {
-    "name": "Gdbnet/fattura-elettronica-php",
+    "name": "gdbnet/fattura-elettronica-php",
     "description": "PHP class for italian electronic invoice xml",
     "keywords": [
         "php",
