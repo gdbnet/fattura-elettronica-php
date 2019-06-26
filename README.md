@@ -2,7 +2,7 @@
 
 A PHP package to read and write the xml of italian electronic invoice.
 
-    composer require Gdbnet/fattura-elettronica-php
+    composer require gdbnet/fattura-elettronica-php
 
 ## Usage
 
