@@ -27,7 +27,7 @@ class FatturaElettronicaPdfPrinter implements FatturaElettronicaPrinterInterface
 
         $pdf->loadHtml($html);
 
-        $pdf->setPaper('A4', 'porttrait');
+        $pdf->setPaper('A4', 'portrait');
 
         $pdf->render();
 
