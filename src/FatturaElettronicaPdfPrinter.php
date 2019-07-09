@@ -21,7 +21,7 @@ class FatturaElettronicaPdfPrinter implements FatturaElettronicaPrinterInterface
     public function stampa(string $xml)
     {
         $htmlPrinter = new FatturaElettronicaHtmlPrinter();
-        $html = $htmlPrinter->$this->stampa($xml);
+        $html = $htmlPrinter->stampa($xml);
 
         $pdf = new Dompdf();
 
