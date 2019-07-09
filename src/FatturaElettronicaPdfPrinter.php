@@ -18,7 +18,7 @@ class FatturaElettronicaPdfPrinter implements FatturaElettronicaPrinterInterface
      *
      * @return mixed
      */
-    public function stampa(string $xml)
+    public function stampa(string $xml, string $orientation = null)
     {
         $htmlPrinter = new FatturaElettronicaHtmlPrinter();
         $html = $htmlPrinter->stampa($xml);
@@ -27,7 +27,11 @@ class FatturaElettronicaPdfPrinter implements FatturaElettronicaPrinterInterface
 
         $pdf->loadHtml($html);
 
-        $pdf->setPaper('A4', 'portrait');
+        if($orientation === null) {
+            $pdf->setPaper('A4', 'portrait');
+        } else {
+            $pdf->setPaper('A4', $orientation);
+        }
 
         $pdf->render();
 

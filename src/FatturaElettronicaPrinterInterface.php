@@ -15,5 +15,5 @@ interface FatturaElettronicaPrinterInterface
      *
      * @return mixed
      */
-    public function stampa(string $xml);
+    public function stampa(string $xml, string $orientation = null);
 }

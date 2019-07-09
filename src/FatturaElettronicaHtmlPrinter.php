@@ -18,7 +18,7 @@ class FatturaElettronicaHtmlPrinter implements FatturaElettronicaPrinterInterfac
      *
      * @return string
      */
-    public function stampa(string $xml)
+    public function stampa(string $xml, string $orientation = null)
     {
         $xslDoc = new DOMDocument();
         $xslDoc->load(dirname(__FILE__) . '/../xsl/FoglioStileAssoSoftware.xsl');
